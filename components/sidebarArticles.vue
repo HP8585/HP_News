@@ -20,7 +20,7 @@ const year = now.getFullYear()
 
 const articles = ref('')
 async function loadNews(){
-    const { data } = await useFetch(`https://newsapi.org/v2/everything?q=life&from=${year}-${month}-${day}&sortBy=publishedAt&pageSize=5&page=1`, {
+    const { data } = await useFetch(`https://newsapi.org/v2/everything?q=life&from=${year}-${month}-${day}&sortBy=publishedAt&pageSize=8&page=1`, {
         headers:{
             Authorization: 'Bearer 4bc4912a5f8448e09f5da308e62c27be'
         }

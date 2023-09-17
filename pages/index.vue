@@ -90,15 +90,28 @@ const searchQSet = (category) => {
 }
 const articles = ref('')
 
-async function loadNews(){
+// async function loadNews(){
+//     const { data } = await useFetch(`https://newsapi.org/v2/everything?q=${searchQ.value === '' ? 'world': searchQ.value}&from=${year}-${month}-${day}&sortBy=publishedAt&pageSize=5&page=${page.value}`, {
+//         headers:{
+//             Authorization: 'Bearer 4bc4912a5f8448e09f5da308e62c27be'
+//         }
+//     })
+    
+//     articles.value = data.value.articles
+
+// }
+
+async function loadNews() {
+  try {
     const { data } = await useFetch(`https://newsapi.org/v2/everything?q=${searchQ.value === '' ? 'world': searchQ.value}&from=${year}-${month}-${day}&sortBy=publishedAt&pageSize=5&page=${page.value}`, {
         headers:{
             Authorization: 'Bearer 4bc4912a5f8448e09f5da308e62c27be'
         }
     })
-    
-    articles.value = data.value.articles
-
+    articles.value = data.articles;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 
