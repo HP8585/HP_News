@@ -27,14 +27,14 @@ async function loadNews(){
     })
     
     articles.value = data.value.articles
-    // articles.value = data.value.articles
+    
 
 }
 
 
 onMounted(()=>{
     setTimeout(() => {
-        // loadNews()
+        loadNews()
     }, 2000);
   
 

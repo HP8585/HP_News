@@ -4,7 +4,7 @@
             <p class="text-xl">Loading, please wait...</p>
         </div>
 
-        <div  :class="{'w-10 py-[0.2em] translate-x-[37em] md:translate-x-[90em]':!isExpanded, 'w-[13em] translate-x-[70em] md:translate-x-[80em]':isExpanded}" class="duration-300 cursor-pointer  overflow-hidden  relative bg-red-700 rounded-full  px-3 translate-x-[29em] translate-y-[-3em] sm:translate-x-[-23em] ">
+        <div  :class="{'w-10 py-[0.2em] translate-x-[37em] md:translate-x-[90em]':!isExpanded, 'w-[13em] translate-x-[27em] md:translate-x-[80em]':isExpanded}" class="duration-300 cursor-pointer  overflow-hidden  relative bg-red-700 rounded-full  px-3 translate-x-[29em] translate-y-[-3em] sm:translate-x-[-23em] ">
             <div class="flex">
             <i @click="isExpanded = !isExpanded" class="mr-2 ml-[-0.1em] text-2xl fa fa-magnifying-glass fa-shake text-white"/>
         <input v-model="searchQ" class="outline-none pl-4 ml-3" type="text" placeholder="Search..." >
@@ -22,7 +22,7 @@
         <ul  class="w-[30em] md:w-full z-[222]">
             <li @click="navigateToArticle(index)" v-for="(item, index) in articles" :key="index" class="mb-10 bg-gray400 shadow-xl hover:scale-105 cursor-pointer duration-300 hover:shadow-2xl " >
                 <div class="relative">
-                <img :src="item.urlToImage" alt="img" class="w-full max-h-[10em] md:max-h-[32em] object-cover flex items-center justify-center"  v-if="item.urlToImage">
+                <img :src="item.urlToImage" alt="img" class="w-full max-h-[16em] md:max-h-[32em] object-cover flex items-center justify-center"  v-if="item.urlToImage">
                 
                     <div v-if="item.urlToImage">
                         <span class="translate-y-[-14em] md:absolute text-white font-bold px-2 py-2 text-[.7rem] md:text-[0.8rem] bg-gray-800 bg-opacity-60 z-10">Published: {{ item.publishedAt }}</span>

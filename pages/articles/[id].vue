@@ -1,11 +1,12 @@
 <template>
 
-    <aside class="text-white absolute top-14 mt-0 mr-10 w-[10em] md:h-screen bg-gray-800">
+    <aside class="text-white inline-block top-14 mt-0 mr-10 w-[10em] md:h-screen bg-gray-800">
         <h1 class="text-center font-bold mt-3 mb-5">Categories</h1>
         <sidebarCategories @navigate="navigateTo('/')"/>
     </aside>
 
-    <div class="text-white mt-10 flex items-center justify-center ml-[10em] " >
+    <div class="inline-block">
+    <div class="text-white mt-10 flex items-center justify-center  ml-[20em] md:ml-[10em] " >
         <div v-if="article" class="w-[18em] md:w-fit">
             <div>
                 <h1 class="font-bold mb-6 text-xl w-[34em]">{{ article.title }}</h1>
@@ -36,7 +37,7 @@
         <div v-else>Loading, please wait!</div>
         
     </div>
-    
+</div>
     
 </template>
 
